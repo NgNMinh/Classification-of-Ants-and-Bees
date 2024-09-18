@@ -1,7 +1,7 @@
 # Classification-of-Ants-and-Bees
 This project classifies images of ants and bees using the ResNet18 model with transfer learning.
 # Model
-[best.pt](https://drive.google.com/file/d/1vzvDzK32aVW3TVf8Z3e4hnM8bhIdyQV8/view?usp=drive_link)
+[best.pt](https://drive.google.com/uc?export=download&id=1vzvDzK32aVW3TVf8Z3e4hnM8bhIdyQV8)
 
 # How to Use 
 Please download model, put them in the folder ./model, and run
