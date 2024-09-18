@@ -32,7 +32,7 @@ def inference(arg):
     )
     model = resnet18()
     model.fc = torch.nn.Linear(in_features=512, out_features=2, bias=True)
-    model.load_state_dict(torch.load('model/best_f.pt',  map_location=torch.device(device)))
+    model.load_state_dict(torch.load('model/best.pt',  map_location=torch.device(device)))
     model.eval()
 
     model.to(device)
