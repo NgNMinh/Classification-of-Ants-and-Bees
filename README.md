@@ -6,4 +6,4 @@ This project classifies images of ants and bees using the ResNet18 model with tr
 - Easy-to-use inference script
 # How to Use 
 To run inference on an image, use the following command:
-```python .\inference.py -i <path_to_image>
+```python .\inference.py -i <path_to_image>```
