@@ -1,8 +1,10 @@
 # Classification-of-Ants-and-Bees
 This project classifies images of ants and bees using the ResNet18 model with transfer learning.
+# Model
+[best.pt](https://drive.google.com/file/d/1vzvDzK32aVW3TVf8Z3e4hnM8bhIdyQV8/view?usp=drive_link)
 
 # How to Use 
-To run inference on an image, use the following command:
+Please download model, put them in the folder ./model, and run
 ```
 python .\inference.py -i <path_to_image>
 ```
