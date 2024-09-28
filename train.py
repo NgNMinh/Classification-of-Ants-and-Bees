@@ -1,6 +1,6 @@
 from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
-from torch.optim import Adam, SGD
+from torch.optim import Adam, SGD, lr_scheduler
 from torchvision.models import resnet18, ResNet18_Weights
 import torch
 from torch import nn
@@ -48,6 +48,7 @@ def train():
     model.to(device)
 
     optim = SGD(model.parameters(), 0.001, 0.9)
+    scheduler = lr_scheduler.StepLR(optim, step_size=7, gamma=0.1)
     loss_fn = nn.CrossEntropyLoss()
     epochs = 25
     early_stopping = 0
@@ -66,7 +67,8 @@ def train():
             optim.step()
             optim.zero_grad()
             progress_bar.set_description("Epoch {}/{}. Loss {:0.4f}".format(epoch + 1, epochs, loss))
-
+            
+        scheduler.step()
         model.eval()
         all_preds = []
         all_labels = []
